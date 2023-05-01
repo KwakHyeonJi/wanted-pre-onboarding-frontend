@@ -4,7 +4,7 @@ Repository for submitting pre-assignments for the Wanted Pre-onboarding front-en
 
 ## Introduction
 
--   Todo list with authentication
+- Todo list with authentication
 
 ## How to run
 
@@ -13,10 +13,10 @@ Repository for submitting pre-assignments for the Wanted Pre-onboarding front-en
 
 ## Demo
 
--   [Link](https://kwakhyeonji.github.io/wanted-pre-onboarding-frontend/)
+- [Link](https://kwakhyeonji.github.io/wanted-pre-onboarding-frontend/)
 
 ## Technologies
 
--   React
--   JavaScript
--   Axios
+- React
+- JavaScript
+- Axios
