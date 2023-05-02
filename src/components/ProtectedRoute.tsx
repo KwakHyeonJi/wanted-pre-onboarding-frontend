@@ -1,11 +1,13 @@
 import { Navigate, Outlet } from 'react-router-dom'
 
-interface PrivateRouteProps {
+import { ACCESS_TOKEN_KEY } from '../types/auth'
+
+interface ProtectedRouteProps {
   requireAuth: boolean
 }
 
-const PrivateRoute = ({ requireAuth }: PrivateRouteProps) => {
-  const isAuthenticated = localStorage.getItem('accessToken')
+const ProtectedRoute = ({ requireAuth }: ProtectedRouteProps) => {
+  const isAuthenticated = localStorage.getItem(ACCESS_TOKEN_KEY)
 
   if (requireAuth) {
     return isAuthenticated ? <Outlet /> : <Navigate to="/" />
@@ -14,4 +16,4 @@ const PrivateRoute = ({ requireAuth }: PrivateRouteProps) => {
   }
 }
 
-export default PrivateRoute
+export default ProtectedRoute

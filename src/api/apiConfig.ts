@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+import { ACCESS_TOKEN_KEY } from '../types/auth'
+
 const options = {
   baseURL: 'https://www.pre-onboarding-selection-task.shop/',
   timeout: 5000,
@@ -10,7 +12,7 @@ export const instance = axios.create(options)
 export const authInstance = axios.create(options)
 
 authInstance.interceptors.request.use(config => {
-  const accessToken = localStorage.getItem('accessToken')
+  const accessToken = localStorage.getItem(ACCESS_TOKEN_KEY)
   if (accessToken) {
     config.headers.Authorization = `Bearer ${accessToken}`
   }
