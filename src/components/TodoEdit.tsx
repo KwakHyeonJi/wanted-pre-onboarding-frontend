@@ -4,7 +4,7 @@ import { updateTodo } from '../api/todo'
 import { useTodoDispatch } from '../context/todoContext'
 import { TodoActionTypes } from '../context/todoReducer'
 import useInput from '../hooks/useInput'
-import { Todo } from '../interface/todo'
+import { Todo } from '../types/todo'
 
 interface TodoEditProps extends Todo {
   handleToggle: (todo: Todo) => void

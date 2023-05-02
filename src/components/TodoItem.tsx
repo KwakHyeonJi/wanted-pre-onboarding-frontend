@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { deleteTodo } from '../api/todo'
 import { useTodoDispatch } from '../context/todoContext'
 import { TodoActionTypes } from '../context/todoReducer'
-import { Todo } from '../interface/todo'
+import { Todo } from '../types/todo'
 
 interface TodoItemProps extends Todo {
   handleToggle: (todo: Todo) => void

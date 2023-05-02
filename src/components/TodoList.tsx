@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { getTodos, updateTodo } from '../api/todo'
 import { useTodoDispatch, useTodoState } from '../context/todoContext'
 import { TodoActionTypes } from '../context/todoReducer'
-import { Todo } from '../interface/todo'
+import { Todo } from '../types/todo'
 
 import TodoEdit from './TodoEdit'
 import TodoItem from './TodoItem'

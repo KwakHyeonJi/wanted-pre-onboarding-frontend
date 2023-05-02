@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 import { signIn } from '../api/auth'
 import useInputs from '../hooks/useInputs'
+import { ACCESS_TOKEN_KEY } from '../types/auth'
 import { isValidEmail, isValidPassword } from '../utils/validations'
 
 function SignIn() {
@@ -19,7 +20,7 @@ function SignIn() {
     e.preventDefault()
     try {
       const { access_token } = await signIn(email, password)
-      localStorage.setItem('accessToken', access_token)
+      localStorage.setItem(ACCESS_TOKEN_KEY, access_token)
       navigate('/todo')
     } catch (err) {
       setError('로그인 실패')
